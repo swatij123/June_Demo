@@ -1,0 +1,27 @@
+
+
+{% extends 'client/base.html' %} {% load static %} {% load crispy_forms_tags %}
+{% block content %}  {% crispy form %} {# yonetim/templates/list.html #}
+{% load render_table from django_tables2 %}
+
+{% block cover %}
+<table border="1">
+    {% for x in mymembers %}
+      <tr>
+      <td>{{ x.ClientName }}</td>
+      <td>{{ x.Currency }}</td>
+      <td>{{ x.BillingMethod }}</td>
+      <td><a href="/delete/{{ x.id }}">delete</a></td>
+      <td><a href="/add/{{ x.id }}">Add client Details</a></td>
+      </tr>
+     
+    {% endfor %}
+    </table>
+
+{% endblock cover %}
+
+{% endblock content %}
+
+
+
+

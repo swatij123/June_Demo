@@ -1,0 +1,22 @@
+<form action="updaterecord/{{ mymember.id }}" method="post">
+    {% csrf_token %}
+    Email Id:<br>
+    <input name="Emailid" value="{{ mymember.Emailid}}">
+    <br><br>
+    First Name:<br>
+    <input name="FirstName" value="{{ mymember.FirstName}}">
+    <br><br>
+    Last Name:<br>
+    <input name="LastName" value="{{ mymember.Lastname }}">
+    <br><br>
+    Phone Number:<br>
+    <input name="Phone" value="{{ mymember.Phone}}">
+    <br><br>
+    Moble Number:<br>
+    <input name="Moble" value="{{ mymember.Moble}}">
+    <br><br>
+    Fax:<br>
+    <input name="Fax" value="{{ mymember.Fax}}">
+    <br><br>
+    <input type="submit" value="Submit">
+    </form>
